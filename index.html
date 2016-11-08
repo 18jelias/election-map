@@ -54,6 +54,7 @@ div.tooltip {
 
 <h1 id="title">How many states will it take to win?</h1>
 <p id="text">It only takes 270 to win.</p>
+<p id="selected"></p>
 <script>
 
 var dict = [
@@ -559,6 +560,9 @@ function clicked(d,i) {
     console.log("Bue")
     trumpWins();
   }
+  document.getElementById("selected").innerHTML = "Currently "
+                                              + demCount + " electoral votes are selected for Clinton, and "
+                                              + repCount + " electoral votes are selected for Trump."
 }
 
 function willClintonWin() {
